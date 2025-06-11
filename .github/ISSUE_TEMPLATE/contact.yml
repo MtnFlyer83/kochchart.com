@@ -1,0 +1,21 @@
+name: Contact or Feedback
+description: Ask a question or share feedback.
+title: "[Contact] "
+labels: [contact]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Your Name
+      placeholder: e.g. Jane Doe
+  - type: input
+    id: email
+    attributes:
+      label: Your Email
+      placeholder: e.g. you@example.com
+  - type: textarea
+    id: message
+    attributes:
+      label: Message
+      description: What would you like to say?
+      placeholder: Type here...
