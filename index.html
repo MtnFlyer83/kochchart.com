@@ -16,19 +16,9 @@
     h1 {
       color: #00529B;
     }
-    .donate-section {
-      margin-top: 2em;
-      padding-top: 1em;
-      border-top: 1px solid #ccc;
-    }
-    .paypal-button, .venmo-link {
-      margin-top: 1em;
-    }
-    img.venmo-qr {
-      max-width: 200px;
-      display: block;
-      margin-top: 0.5em;
-    }
+      <script
+      src="https://www.paypal.com/sdk/js?client-id=BAA_8wA43fp_mfrLNthd1yXTrq7boNNx8EcTkQgtuSi0DpGP88hqqTKLvCtJ6EGuDggVmPHCtrP1f5mZW8&components=hosted-buttons&enable-funding=venmo&currency=USD" >
+      </script >
   </style>
 </head>
 <body>
@@ -105,6 +95,13 @@
         </b>
     </p>
 
+    <div id="paypal-container-FGMGX8HTKU832"></div>
+    <script>
+  paypal.HostedButtons({
+    hostedButtonId: "FGMGX8HTKU832",
+  }).render("#paypal-container-FGMGX8HTKU832")
+    </script>
+
     <p>
         Have a question or feedback?
         <a href="https://github.com/MtnFlyer83/kochchart.com/issues/new?template=contact.yml">Contact me via GitHub</a><br />
@@ -125,34 +122,7 @@
         <center> &copy;2025 AvMech, LLC. A Colorado company. </center>
     </p>
 
-    <!--
-      <div class="donate-section">
-        <h2>Support This Project</h2>
-        <p>
-          If you’ve found this site helpful and want to support its continued development,
-          you can make a small donation:
-        </p>
 
-        [ PayPal Donate Button ]
-        <div class="paypal-button">
-          <form action="https://www.paypal.com/donate" method="post" target="_blank">
-            <input type="hidden" name="business" value="YOUR_PAYPAL_EMAIL_OR_ID" />
-            <input type="hidden" name="no_recurring" value="0" />
-            <input type="hidden" name="currency_code" value="USD" />
-            <input type="submit" value="Donate with PayPal" />
-          </form>
-        </div>
-
-        [ Venmo Link ]
-        <div class="venmo-link">
-          <p>
-            Or <a href="https://venmo.com/YOUR-VENMO-USERNAME" target="_blank">click here to Venmo me</a>
-          </p>
-          [ Optional QR code image ]
-          [ <img src="venmo_qr.png" alt="Venmo QR Code" class="venmo-qr" /> ]
-        </div>
-      </div>
-    -->
 
 </body>
 </html>
