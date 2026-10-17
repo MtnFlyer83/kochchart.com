@@ -12,7 +12,7 @@
     header { background:var(--navy); color:#e9f1f2; }
     .wrap { width:min(900px, calc(100% - 40px)); margin:auto; }
     .head { display:flex; justify-content:space-between; align-items:center; padding:22px 0; gap:24px; flex-wrap:wrap; }
-    .brand { font-size:20px; font-weight:800; letter-spacing:.04em; color:#e9f1f2; text-decoration:none; }
+    .brand { display:inline-flex; align-items:center; gap:12px; font-size:20px; font-weight:800; letter-spacing:.04em; color:#e9f1f2; text-decoration:none; }
     .back { color:#9fe0ed; text-decoration:none; font-size:14px; }
     main { padding:75px 0 95px; }
     .eyebrow { text-transform:uppercase; color:#9a692c; font-size:12px; font-weight:800; letter-spacing:.19em; }
@@ -25,11 +25,12 @@
     footer { padding:28px 0; background:#071722; color:#9bb1ba; font-size:13px; }
     footer a { color:#bfeaf4; }
   </style>
+<link rel="icon" href="icon/favicon.ico" sizes="any">
 </head>
 <body>
   <header>
     <div class="wrap head">
-      <a class="brand" href="index.html">KochChart</a>
+      <a class="brand" href="index.html"><img src="images/branding/kochchart.svg" alt="" width="38" height="38">KochChart</a>
       <a class="back" href="index.html">← Back to home</a>
     </div>
   </header>

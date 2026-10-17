@@ -139,3 +139,25 @@
     .carb-ice-page a:not(.btn) {
         color: #087b9c;
     }
+
+/* Technical Blue brand identity: KochChart and KochChart Plus */
+.brand { gap: 11px; white-space: nowrap; }
+.brand-logo { display: block; width: 48px; height: 48px; flex: 0 0 auto; }
+.brand-wordmark { display: inline-block; position: relative; line-height: 1.1; }
+.brand-wordmark > span { color: var(--teal); }
+.brand-wordmark small { position: static; display: block; margin-top: 5px; font-size: 8px; line-height: 1; }
+.edition-identity { display: flex; align-items: center; gap: 17px; margin: 0 0 14px; }
+.edition-identity img { display: block; width: 64px; height: 64px; flex: 0 0 64px; }
+.edition-identity .tier { display: block; }
+.footer-brand { display: inline-flex; align-items: center; gap: 11px; }
+.footer-brand img { display: block; width: 32px; height: 32px; }
+.release-brand { display: inline-flex; align-items: center; gap: 12px; }
+.release-brand img { display: block; width: 40px; height: 40px; }
+.eyebrow-link:has(.educational-brand-logo) { display: inline-flex; align-items: center; gap: 12px; }
+.educational-brand-logo { display: block; flex: 0 0 36px; }
+@media (max-width: 700px) {
+  .brand-logo { width: 40px; height: 40px; }
+  .brand { gap: 8px; font-size: 16px; }
+  .brand-wordmark small { font-size: 7px; }
+  .edition-identity img { width: 56px; height: 56px; flex-basis: 56px; }
+}
