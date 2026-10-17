@@ -118,3 +118,24 @@
         padding-bottom: 95px;
     }
 }
+/* Carburetor icing educational page */
+
+.carb-ice-page {
+    background-color: #f0f3f4;
+    color: #233b46;
+}
+
+    .carb-ice-page h1,
+    .carb-ice-page h2,
+    .carb-ice-page h3 {
+        color: #233b46;
+    }
+
+    .carb-ice-page p,
+    .carb-ice-page li {
+        color: #46606c;
+    }
+
+    .carb-ice-page a:not(.btn) {
+        color: #087b9c;
+    }
