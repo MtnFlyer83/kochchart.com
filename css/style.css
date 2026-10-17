@@ -75,3 +75,29 @@
 .release-footer a{color:#a9e9f8}
 @media(max-width:900px){.news-grid{grid-template-columns:1fr}.news-card{min-height:0}}
 @media(max-width:700px){.release-intro{padding:65px 0 48px}.release-content{padding-top:38px}.release-entry{padding:21px}.release-top{min-height:70px}}
+/* Prevent hero text overlap on shorter screens */
+
+.hero {
+    height: auto;
+    min-height: max(675px, 100svh);
+}
+
+.hero-inner {
+    height: auto;
+    min-height: max(675px, 100svh);
+    padding-top: 140px;
+    padding-bottom: 125px;
+}
+
+@media (max-width: 700px) {
+    .hero {
+        height: auto;
+        min-height: max(670px, 100svh);
+    }
+
+    .hero-inner {
+        min-height: max(670px, 100svh);
+        padding-top: 115px;
+        padding-bottom: 95px;
+    }
+}
