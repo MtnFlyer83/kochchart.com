@@ -1,275 +1,59 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="A free software tool for estimating the impact of density altitude on aircraft performance.
-          Includes a density altitude calculator." />
-    <meta name="keywords" content="Koch Chart, kochchart, density altitude calculator, free software, Imeson, Embree, density altitude, takeoff distance,
-          aircraft performance, aviation calculator, general aviation, single engine aircraft, pilot tools, hot and high airports,
-          takeoff performance, carburetor icing, carburetor ice" />
-    <meta name="author" content="James Greer" />
-
-    <!-- to fix Google not indexing this page -->
-    <link rel="canonical" href="https://kochchart.com/" />
-    <title>KochChart - A Density Altitude Awareness Tool</title>
-
-    <!-- Open Graph for social media previews -->
-    <meta property="og:title" content="KochChart - A Density Altitude Awareness Tool" />
-    <meta property="og:description" content="A free software tool for estimating the impact of density altitude on aircraft performance." />
-    <meta property="og:image" content="https://kochchart.com/kochchart-preview.png" />
-    <meta property="og:url" content="https://kochchart.com" />
-    <meta property="og:type" content="website" />
-
-    <!-- Favicon (optional) -->
-    <link rel="icon" href="icon/favicon.ico" type="image/x-icon" />
-
-    <!-- Optional: Twitter Card (if sharing to Twitter/X) -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="KochChart - A Density Altitude Awareness Tool" />
-    <meta name="twitter:description" content="A free software tool for estimating the impact of density altitude on aircraft performance." />
-    <meta name="twitter:image" content="https://kochchart.com/kochchart-preview.png" />
-
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            max-width: 800px;
-            margin: 2em auto;
-            padding: 0 1em;
-            color: #333;
-        }
-
-        h1 {
-            color: #00529B;
-        }
-    </style>
-
-    <style>
-        .news {
-            color: red;
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="KochChart is a Windows educational tool for understanding density altitude and its effects on light aircraft performance.">
+  <meta name="theme-color" content="#071722">
+  <title>KochChart | Density altitude, made visible</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
 </head>
-
-
-<!-- <link rel="stylesheet" href="style.css" /> -->
-
 <body>
-
-    <div style="text-align:center;">
-        <h1>The <i>KochChart</i> Density Altitude Software Tool</h1>
+  <a href="#main" class="skip">Skip to content</a>
+  <header class="site-header" id="top">
+    <div class="nav-wrap">
+      <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">◈</span> KOCH<span>CHART</span><small>AVIATION EDUCATION</small></a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle navigation">☰</button>
+      <nav id="main-nav" aria-label="Main navigation"><a href="#why">Overview</a><a href="#features">Features</a><a href="#versions">Free & Plus</a><a href="#whats-new">What's New</a><a href="#about">About</a><a class="nav-download" href="#download">Download <span aria-hidden="true">↗</span></a></nav>
     </div>
-
-    <div style="text-align:center;">
-        <img src="images/kochBanner.JPG" style="width: 400px;" /><br />
-        <p><a href="#downloads">Download Software</a></p>
-    </div>
-
-    <h2 class="news"><em>News!</em></h2>
-
-    <p>
-        <b><em>KochChart Plus version 1.0 has been released.</em></b> KochChart <em>Plus</em> is a paid version of KochChart that
-        has all the features of KochChart, plus a <b><em>DisplayView</em></b> feature, which displays a summary of the data from the current
-        METAR from your selected station, the Koch Chart for
-        the current conditions, the Carb Ice potential chart, pressure and density altitude, as well
-        as a local radar image (if available). The display updates automatically as new data become available.
-        A one-time fee of $20 is requested for KochChart Plus. You can use KochChart Plus for free as well,
-        but it will have a "nag screen" until you request and receive a license code. You can download the KochChart Plus software at the link
-        above.
-    </p>
-
-    <div style="text-align:center;">
-        <a href="images/DisplayView.JPG" target="_blank" rel="noopener noreferrer">
-            <img src="images/DisplayView.JPG" style="width: 400px;">
-        </a>
-    </div>
-
-    <p>
-        <b><em>KochChart version 4.0.5 has added a new "Air Data" tab.</em></b> This tab is a table showing some of the input and output
-        values used in making the density altitude (and other) calculations. The table will automatically update if a valid station
-        is selected on the Koch tab, a METAR has been retrieved and the "Auto-Update" feature is enabled.
-    </p>
-
-    <p>
-        <b><em>KochChart version 4.0.4 has added "Auto-Update".</em></b> Now you can leave your Koch chart, your Altitude chart
-        and your Carburetor Ice Potential chart open, and the graphics (along with the "Koch" and "Air Data" tabs) will be auto-updated at an
-        interval of your choosing (provided a valid station METAR can be retrieved).
-    </p>
-    <div style="text-align:center;">
-        <a href="images/auto_update.JPG" target="_blank" rel="noopener noreferrer">
-            <img src="images/auto_update.JPG" style="width: 400px;">
-        </a>
-    </div>
-
-    <p>
-        <b><em>KochChart version 4.0.3</em></b> has added a chart indicating the potential for carburetor icing. This chart
-        is based on the carburetor icing probability
-        <a href="https://www.casa.gov.au/sites/default/files/2022-10/carburettor-icing-probability-chart.pdf" target="_blank" rel="noopener noreferrer">chart</a>
-        published by the Civil Aviation Safety Authority (CASA) of Australia. Below is an image of how <i>KochChart</i> displays
-        the carburetor icing potential based on a METAR (temperature and dew point depression):
-        <div style="text-align:center;">
-            <a href="images/carb_ice.JPG" target="_blank" rel="noopener noreferrer">
-                <img src="images/carb_ice.JPG" style="width: 400px;">
-            </a>
+  </header>
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="video/mountain-flying-poster.jpg" aria-hidden="true"><source src="video/mountain-flying.mp4" type="video/mp4"></video>
+      <div class="hero-shade"></div>
+      <div class="hero-inner container">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="eyebrow-line"></span> BUILT FOR PILOTS WHO FLY HIGH</div>
+          <h1 id="hero-title">The air gets thinner.<br><em>The margins get smaller.</em></h1>
+          <p>Get a clearer picture of how density altitude, wind, and runway conditions affect light-aircraft takeoff and climb performance.</p>
+          <div class="hero-actions"><a class="btn btn-primary" href="#download">Get KochChart <span aria-hidden="true">↗</span></a><a class="btn btn-outline" href="#features">Explore the features <span aria-hidden="true">↓</span></a></div>
+          <div class="hero-meta"><span class="status-dot"></span> WINDOWS DESKTOP <span class="sep"></span> FREE EDITION AVAILABLE <span class="sep"></span> MADE IN COLORADO</div>
         </div>
-        How does this chart differ from the "new" U.S.
-        <a href="docs/NTSB_icing_chart.PDF" target="_blank" rel="noopener noreferrer">NTSB chart</a>?
-        Not a bit. Well, they used different colors, but it appears they adopted the CASA chart.
-
-        The FAA also has a few versions of carburetor icing charts. A simple one is
-        <a href="https://www.faa.gov/sites/faa.gov/files/09_phak_ch7.pdf#page=10" target="_blank">Figure 7-12</a> in
-        FAA-H-8083-25C, the
-        <i>Pilot's Handbook of Aeronautical Knowledge</i> (PHAK).
-        Another is in their "Winter Flying Tips"
-        <a href="https://www.faasafety.gov/files/events/GL/GL09/2018/GL0985130/P-8740-24.pdf#page=5" target="_blank">pub</a>. But their most detailed version is in
-        FAA-H-8083-28A, the <i>Aviation Weather Handbook</i> as
-        <a href="https://www.faa.gov/sites/faa.gov/files/FAA-H-8083-28A_FAA_Web.pdf#page=257" target="_blank">Figure&nbsp20-3</a>.
-        This chart, when the axes are converted to those of the CASA/NTSB chart, is seen to show different icing probability regions,
-        but not drastically so. The trends are the same. See the comparisons below (click on any chart to enlarge it).
-    </p>
-    <p>
-        <div style="text-align:center;">
-            <a href="images/FAA_only.JPG" target="_blank" rel="noopener noreferrer">
-                <img src="images/FAA_only_thumbnail.JPG" />
-            </a>
-            <a href="images/CASA_only.JPG" target="_blank" rel="noopener noreferrer">
-                <img src="images/CASA_only_thumbnail.JPG" />
-            </a>
-            <a href="images/compare_CASA_FAA.JPG" target="_blank" rel="noopener noreferrer">
-                <img src="images/compare_CASA_FAA_thumbnail.JPG" />
-            </a>
+      </div>
+      <div class="hero-footer container"><span>REAL-WORLD AVIATION. BETTER PERFORMANCE AWARENESS.</span><a href="#why">SCROLL TO EXPLORE ↓</a></div>
+    </section>
+    <section class="intro section" id="why"><div class="container intro-grid"><div><p class="overline">01 / THE BIG PICTURE</p><h2>Density altitude isn't just a number. <span>It's a performance story.</span></h2></div><div class="intro-right"><p>At high-elevation airports, a warm day can make a familiar airplane perform very differently. KochChart turns that concept into practical, visual comparisons you can explore and learn from.</p><p>Originally inspired by the classic Koch Chart nomograph, the software now brings together multiple estimation methods, METAR weather, and clear graphical displays.</p><div class="note"><span class="note-icon">i</span><span><strong>Educational use only.</strong> KochChart is not approved for operational flight planning. Use your aircraft's AFM/POH for performance decisions.</span></div></div></div></section>
+    <section class="features section" id="features"><div class="container"><p class="overline">02 / EXPLORE THE TOOL</p><div class="section-heading"><h2>A better way to <span>see the effects.</span></h2><p>From atmospheric conditions to runway winds, KochChart makes the relationships easier to visualize.</p></div><div class="feature-grid"><article class="feature-card large"><span class="feature-icon">↗</span><span class="card-kicker">PERFORMANCE</span><h3>See what altitude does to your takeoff.</h3><p>Compare density-altitude effects as estimated by Koch, Imeson, DENALT and Embree methods.</p><div class="chart-illustration chart-horizontal" role="img" aria-label="Four horizontal bars show shorter takeoff distances higher on the chart and longer distances lower on the chart as density altitude increases"><div class="chart-grid"></div><div class="bars"><i style="width:88%"></i><i style="width:70%"></i><i style="width:52%"></i><i style="width:38%"></i></div><div class="chart-y-axis">DENSITY ALTITUDE INCREASES →</div><div class="chart-axis">TAKEOFF DISTANCE</div></div><span class="card-foot">COMPARATIVE PERFORMANCE VIEWS</span></article><article class="feature-card"><span class="feature-icon">◎</span><span class="card-kicker">REAL CONDITIONS</span><h3>METAR-informed awareness.</h3><p>Retrieve current airport weather observations and explore their effects on calculated conditions.</p><div class="metric-visual"><span>METAR OBSERVATION</span><strong class="metric-metar">METAR KAFF 161755Z 19006KT 10SM CLR 10/M06 A3071</strong><small>SAMPLE AVIATION WEATHER REPORT</small></div></article><article class="feature-card"><span class="feature-icon">✳</span><span class="card-kicker">FLIGHT ENVIRONMENT</span><h3>Wind, runways & carb ice.</h3><p>Explore headwind, tailwind, crosswind, runway slope and runway condition effects, plus carburetor icing potential.</p><a class="carb-ice-feature" href="carb-ice-charts.html" aria-label="Learn more about carburetor icing charts">
+  <img src="images/carb-ice-chart.png" alt="KochChart carburetor icing potential chart, showing colored icing-risk regions by temperature and dew point depression" loading="lazy">
+  <span class="carb-ice-caption">Click to learn more about carburetor icing charts <span aria-hidden="true">↗</span></span>
+</a></article><article class="feature-card feature-wide"><div><span class="feature-icon">▤</span><span class="card-kicker">KOCHCHART PLUS</span><h3>Your airport conditions,<br>all in one view.</h3><p>DisplayView combines weather information, density altitude, performance graphics, carb ice potential and local radar imagery when available.</p></div><figure class="displayview-shot"><a href="images/displayview-kipt.png" target="_blank" rel="noopener" aria-label="Open full-size KochChart Plus DisplayView screenshot"><img src="images/displayview-kipt.png" alt="Actual KochChart Plus DisplayView at KIPT showing altimeters, wind, Koch Chart, radar, runway weather, and carburetor icing chart" loading="lazy"></a><figcaption>Actual KochChart Plus DisplayView · Select to enlarge</figcaption></figure></article></div><p class="illustration-disclaimer">The performance bar graphic is illustrative; the DisplayView image is an actual application screenshot.</p></div></section>
+    <section class="versions section" id="versions"><div class="container"><p class="overline">03 / CHOOSE YOUR VERSION</p><div class="section-heading"><h2>Two ways to <span>explore more.</span></h2><p>Start free or add an always-visible view of your airport conditions.</p></div><div class="version-grid"><article class="version-card"><span class="tier">KOCHCHART</span><h3>Free</h3><div class="price">$0 <small>free for personal use</small></div><p>The core density-altitude awareness tool for pilots and aviation enthusiasts.</p><ul><li>Density-altitude calculations</li><li>Performance comparisons</li><li>METAR-based inputs with auto-updating</li><li>Wind and runway calculations</li><li>Charts, PDF output and carb-ice awareness</li></ul><a class="btn btn-quiet" href="https://github.com/MtnFlyer83/AppBinaries/releases" target="_blank" rel="noopener noreferrer">Download Free <span aria-hidden="true">↗</span></a></article><article class="version-card premium"><div class="popular">ENHANCED EXPERIENCE</div><span class="tier">KOCHCHART PLUS</span><h3>Plus</h3><div class="price">$20 <small>one-time registration</small></div><p>Everything in KochChart, plus a comprehensive, automatically updating DisplayView.</p><ul><li>Everything in the Free edition</li><li>At-a-glance DisplayView</li><li>Local weather radar where available</li><li>Automatic DisplayView updates</li><li>Try before registering</li></ul><a class="btn btn-primary" href="https://github.com/MtnFlyer83/KochChart-Plus/releases" target="_blank" rel="noopener noreferrer">Download Plus <span aria-hidden="true">↗</span></a></article></div><p class="versions-foot">KochChart currently runs on Windows. KochChart Plus can be tried without registering; unregistered use includes a reminder screen.</p></div></section>
+    <section class="whats-new section" id="whats-new" aria-labelledby="whats-new-title">
+      <div class="container"><p class="overline">04 / RECENT IMPROVEMENTS</p>
+        <div class="section-heading"><h2 id="whats-new-title">What's <span>New.</span></h2><p>Recent improvements make KochChart easier to read, update, and use in a wider range of aviation environments.</p></div>
+        <div class="news-grid">
+          <article class="news-card"><span class="news-icon" aria-hidden="true">◉</span><h3>More regional weather radar</h3><p>KochChart Plus radar coverage expanded beyond the contiguous United States, with map overlays and clearer no-data reporting.</p></article>
+          <article class="news-card"><span class="news-icon" aria-hidden="true">▣</span><h3>DisplayView refinements</h3><p>Recent development has focused on METAR readability, scaling across monitor sizes, and clearer presentation of airport conditions.</p></article>
+          <article class="news-card"><span class="news-icon" aria-hidden="true">↻</span><h3>Easier updates</h3><p>In-app version checks, release information, and an installer download workflow make it simpler to keep up with new releases.</p></article>
         </div>
-    </p>
-
-    <p>
-        <b><em>KochChart version 4 has been released!</em></b> The new version allows the
-        user to export the charts and values from a session as a .pdf file, which
-        can then be sent to your email-enabled device.
-    </p>
-
-
-    <h2>Introduction</h2>
-    <p>
-        Welcome! This site is your source for the KochChart educational software
-        tool. This tool compares various estimating methods (including,
-        but not limited to, the Koch Chart) for assessing the impact of
-        density altitude on take-off and rate-of-climb performance. In
-        addition, the tool can estimate the effects of wind, runway slope
-        and runway surface on take-off distance.
-    </p>
-
-    <p>
-        This is a free educational tool created
-        to raise awareness about the significant effects density altitude
-        has on aircraft performance. These effects are especially important for pilots flying
-        at high-elevation airports.
-    </p>
-
-    <p>
-        Why the name 'KochChart'? This program started as a relatively simple digital version
-        of the venerable Koch Chart nomograph (the roots of which are somewhat obscure).
-        The user would type in key parameters (air temperature and pressure altitude) to produce the chart.
-        But eventually automated METAR collection, others' estimating methods (besides Koch), tables,
-        comparison graphs, and even carburetor ice potential were included.
-    </p>
-
-    <p>
-        The algorithms for density altitude effects used in this software were originally developed for
-        light, single-engine, normally aspirated (i.e., not-turbocharged) piston aircraft.
-        They are not applicable to other types of aircraft.
-    </p>
-
-    <h2 id="downloads">Downloads</h2>
-    <p>
-        You can download the KochChart and KochChart <em>Plus</em> software at these links:
-    <p>
-        <a href="https://github.com/MtnFlyer83/AppBinaries/releases">KochChart (free version)</a><br />
-        <a href="https://github.com/MtnFlyer83/KochChart-Plus/releases">KochChart Plus (with DisplayView)</a>
-    </p>
-    Look for the release with<img src="images/latest.JPG" alt="Latest badge" style="vertical-align: middle;" />after the release name.
-    </p>
-
-    <p>
-        Currently, the software is only available for the Windows OS.
-    </p>
-
-    <h2>Instructions</h2>
-    <p>
-        You can view an instructional video here:<br />
-        <a href="https://youtu.be/OBvDZg4hQv8?si=x8TyILi7wFeoCGdb"><img src="images/video.JPG" style="width: 250px;" /></a>
-    </p>
-    <p>
-        And the software was also featured in a Colorado Pilot's Association webinar, which included a detailed demonstration of the software. It
-        can be viewed here (the software discussion starts at around the 32-minute point in the video):<br />
-        <a href="https://youtu.be/Aq4ocgXxLfE?si=XUJU1lLleE8Bk-Pn"><img src="images/CPA_presents.JPG" style="width: 250px;" /></a>.<br />
-
-    </p>
-
-
-    <p>
-        <h3>KochChart Disclaimer and License Agreement - Not for Flight Planning</h3>
-        <i>By using the software, you agree to the following terms:</i>
-        <ol>
-            <li>
-                Educational Use Only: This software is provided for instructional
-                and educational purposes only. It does not meet the requirements
-                of Federal Aviation Regulation (FAR) section 91.103 "Preflight
-                Action" or any other regulation.
-            </li>
-            <li>
-                No Operational Use: This tool is not approved for flight planning
-                or operational decision-making. Pilots must always consult
-                their official Airplane Flight Manual (AFM) or Pilot's Operating
-                Handbook (POH) for performance calculations.
-            </li>
-            <li>
-                License Terms: This software is free for personal, non-commercial
-                use. Redistribution, modification, or commercial use is prohibited
-                without prior written consent from the author.
-            </li>
-            <li>
-                No Warranty: This software is provided "as is," without any
-                warranties or guarantees of accuracy, saftey, or fitness for any
-                purpose. Use at your own risk.
-            </li>
-        </ol>
-    </p>
-
-    <h2>Supporting KochChart</h2>
-    <p>
-        The basic KochChart software is free, and a $20 registration fee is requested for KochChart <em>Plus</em>. You
-        can use KochChart Plus for free as well, but it will have a "nag screen" until you request and
-        receive a license code. Please visit <A href="https://kochchart.com/registration">https://kochchart.com/registration</A> to request one.
-        I hope you enjoy the software, and gain
-        a better appreciation for the effects of density altitude on aircraft performance. <br />
-        &nbsp;&nbsp;&nbsp; <i>--Jim&nbsp;Greer</i>
-    </p>
-
-
-    <h2>Questions and Feedback</h2>
-    <p>
-        Have a question or feedback?
-        <a href="https://github.com/MtnFlyer83/kochchart.com/issues/new?template=contact.yml">Contact me via GitHub</a><br />
-        ...or use the Contact Form below.
-    </p>
-
-    <h2 id="contact-form">Contact Form</h2>
-    <form action="https://formsubmit.co/502a5b42a8247ab408dc95f580955a1b" method="POST">
-        <input type="hidden" name="_captcha" value="true">
-        <input type="text" name="name" placeholder="Your name" required><br><br>
-        <input type="email" name="email" placeholder="Your email" required><br><br>
-        <textarea name="message" placeholder="Your message" required></textarea><br><br>
-        <button type="submit">Send Message</button>
-    </form>
-
-    <p>
-        <center> <img src="images/logo_small_no_words.jpg" /> </center>
-        <center> &copy;2025, 2026 AvMech, LLC. A Colorado company. </center>
-        <center> <h4><a href="https://github.com/MtnFlyer83/AppBinaries-OpenUp/releases">[Weather Software]</a></h4> </center>
-    </p>
-
-
-
+        <div class="news-actions"><a class="btn btn-outline" href="release-history.html">View complete release history <span aria-hidden="true">→</span></a><span>Detailed version notes for KochChart Free and KochChart Plus</span></div>
+      </div>
+    </section>
+    <section class="cta section" id="download"><div class="container cta-inner"><div><p class="overline">05 / READY TO EXPLORE?</p><h2>Bring the numbers <em>into focus.</em></h2><p>Download the latest release and discover how much conditions can change light-aircraft performance.</p></div><div class="cta-buttons"><a class="btn btn-primary" href="https://github.com/MtnFlyer83/AppBinaries/releases" target="_blank" rel="noopener noreferrer">Download Free ↗</a><a class="btn btn-outline" href="https://github.com/MtnFlyer83/KochChart-Plus/releases" target="_blank" rel="noopener noreferrer">Download Plus ↗</a><a class="register-link" href="https://kochchart.com/registration">Register KochChart Plus →</a></div></div></section>
+    <section class="about section" id="about"><div class="container about-grid"><div><p class="overline">06 / WHY KOCHCHART?</p><h2>Created by a pilot.<br><span>For fellow pilots.</span></h2></div><div><p>KochChart began as a digital interpretation of the traditional Koch Chart and evolved into a broader educational tool to illustrate how atmospheric conditions influence light aircraft.</p><p>It's designed to support learning and awareness—not to replace approved aircraft performance data or required preflight planning.</p><a class="text-link" href="https://kochchart.com/registration">Plus registration information →</a></div></div></section>
+    <section class="legal section" id="legal"><div class="container"><h2>Educational use & licensing</h2><p>Not for flight planning or operational decisions. KochChart does not satisfy the requirements of FAR 91.103 or other regulatory requirements. Always consult the approved Airplane Flight Manual (AFM) or Pilot's Operating Handbook (POH) for your aircraft's performance calculations. KochChart is intended for light, single-engine, normally aspirated piston aircraft and does not apply to all aircraft types.</p><p>Software is provided for personal, non-commercial educational use without warranty. Redistribution, modification and commercial use require the author's prior written consent. Review the full terms on the current KochChart website before using the software.</p></div></section>
+  </main>
+  <footer class="footer"><div class="container footer-inner"><div><span class="footer-brand">◈ KOCHCHART</span><p>Density altitude awareness for general aviation.</p><small>© 2026 AvMech, LLC · A Colorado company</small></div><div class="footer-links"><a href="#features">Features</a><a href="#versions">Free & Plus</a><a href="release-history.html">Release history</a><a href="#download">Downloads</a><a href="https://kochchart.com/registration">Registration</a><a href="#legal">Terms</a></div></div></footer>
 </body>
 </html>
